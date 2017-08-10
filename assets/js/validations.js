@@ -1,14 +1,14 @@
-
+var photo_url = ''; //save pictures
 $(document).ready(function () {
     $("#btn-upload").click(handleFileSelect);//handleFileSelect, extract the files on input
     $('#sign-session').click(onLogin);//listener to button click
+    $("#sign-session").click(saveToLocalStorage); //guarda a local storage
     getFromLocalStorage(); //obtener local storage
 });
 
 //This function save to local storage
 function saveToLocalStorage() {
     if (typeof (Storage) !== "undefined") {//soporte del navegador
-
         if (photo_url != '') {//si la foto es diferente de vacìo
             localStorage.setItem('photo', photo_url);
         }
@@ -42,7 +42,7 @@ function getFromLocalStorage() {
 }
 
 //This function validate the name and email and put a red border in case of error
-function onLogin() {
+function validateForm() {
     var valid = true;
     if (!(/^([a-zñáéíóú]{2,13})+$/.test($("#firstname").val()))) {
         $("#firstname").css("border", "1px solid red");
