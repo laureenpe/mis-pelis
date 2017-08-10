@@ -49,7 +49,7 @@ function validateForm() {
         valid = false;
     }
     if ($('#username').val() == '') {
-        $("#username").css("border", "1px solid red");
+        $("#firstname").css("border", "1px solid red");
         alert('Username no debe estar vacío');
         valid = false;
     }
@@ -60,8 +60,8 @@ function validateForm() {
         valid = false;
     }
     if ($('#country').val() == '') {
-        alert('Country no debe estar vacío');
         $("#country").css("border", "1px solid red");
+        alert('Country no debe estar vacío');
         valid = false;
     }
     return valid;
