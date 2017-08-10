@@ -61,6 +61,10 @@ body{
 		border-bottom: 1px solid white;
 		box-shadow: none;
 	}
+	input[type=text]:not(.browser-default):focus:not([readonly])+label{
+		color: white;
+		font-size: 13px;
+	}
 }
 #button-login{
 	.waves-effect{
