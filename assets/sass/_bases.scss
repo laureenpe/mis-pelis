@@ -4,6 +4,43 @@
 	font-family:$font-familyOpen;
 }
 
+
+//index 1
+
+#intro{
+	background-color: #C5454A;
+	padding-bottom:30%;
+
+}
+
+.intro-pelis{
+	p{
+		font-family:$font-familyAnton;
+		font-size: 80px;
+		color: $blanco;
+		letter-spacing:3px;
+		padding-top: 30%;
+		padding-bottom: 10%;
+		
+	}
+	button{
+	background-color: $blanco;
+	color: $rojo;
+	padding: 10px;
+	width: 100%;
+	border-style: none;
+	margin-top:8px;
+	font-size: 17px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	border-radius:3px;
+	}
+	a{
+		color:$blanco;
+	}
+}
+
+
 nav{
 	background-color:$color-azul;
 	width:100%;
@@ -11,12 +48,46 @@ nav{
 
 .titulo-seccion{
 	color:white;
-	font-size: 23px;
+	font-size: 18px;
 }
 
 .navbar{
 	    display: flex;
 }
+
+
+#registro{
+	background-color:$gris-claro;
+}
+
+.input-field{
+	margin-top:15%;
+	span{
+		color: $rojo;
+	}
+	input{
+		background-color:whitesmoke !important;
+		border: none !important;
+		border-radius: 3px !important;
+		height: 30px !important;
+	}
+}
+
+.botones{
+	.upload{
+		background-color:$gris-oscuro;
+		font-size:12px;
+		text-transform:capitalize;
+		margin-bottom: 50px;
+	}
+	.create{
+		background-color:$gris-oscuro;
+		font-size:16px;
+		width:70%;
+		text-transform:capitalize;
+	}
+}
+
 
 /* The side navigation menu */
 .sidenav {
@@ -143,3 +214,4 @@ nav{
 .movie:hover{
 	background-color:$color-gris;
 }
+/*FIN SECCION PELICULAS*/

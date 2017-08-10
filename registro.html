@@ -2,10 +2,55 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Registro</title>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
+	<nav>
+		<div class="container">
+			<div class="row navbar">
+				<div class="col m3 s3 center-align">
+					<span><i class="fa fa-bars" aria-hidden="true"></i></span>
+				</div>
+				<div class="col m6 s6 center-align">
+					<p class="titulo-seccion">CREATE ACCOUNT</p>
+				</div>
+				<div class="col m3 s3 center-align">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section id="registro">
+		<div class="container">
+			<div class="row">
+				<div class="col s1 offset-s1 col m10 s10">
+					<div class="input-field">
+						<span>Name</span>
+						<input type="text" class="registro-name">
+						<span>Username</span>
+						<input type="text" class="registro-username">
+						<span>E-mail</span>
+						<input type="text" class="registro-email">
+						<span>Country</span>
+						<input type="text" class="registro-country">
+					</div>
+				</div>
+				<div class=" col s2 offset-s2 col m8 s8 center-align botones">
+					<a class="waves-effect waves-light btn upload">Upload Photo</a>
+				</div>
+				<div class=" col s2 offset-s2 col m8 s8 center-align botones">
+					<a class="waves-effect waves-light btn create">Create</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	<script src="dist/js/script.js"></script>
 </body>
 </html>
