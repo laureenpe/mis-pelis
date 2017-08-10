@@ -65,6 +65,7 @@ body{
 		color: white;
 		font-size: 13px;
 	}
+	
 }
 #button-login{
 	.waves-effect{
@@ -77,9 +78,22 @@ body{
     letter-spacing: 2px;
     margin-bottom: 10px;
 	border-radius: 3px;
-	
 
 	}
+	.float{
+		float: right;
+		width: 59px;
+		border-radius: 50%;
+		
+	}
+	.gray{
+		background-color:white;
+		
+	}
+	.btn-floating.btn-large i {
+    line-height: 56px;
+    color:$rojo;
+}
 }
 
 
@@ -110,6 +124,7 @@ nav{
 	}
 	#files{
 		color: red;
+		padding-top: 10px;
 	}
 	
 }
