@@ -6,7 +6,7 @@
 body{
 	background-color: #C5454A;
 }
-
+/*Index*/
 #intro{
 	background-color: #C5454A;
 	padding-bottom:30%;
@@ -41,11 +41,11 @@ body{
 }
 /*Login*/
 #login{
-	background-color: #C5454A;
+	background-color: $rojo;
 	h5{
 		font-family: Anton,sans-serif;
 		text-transform: uppercase;
-		color: white;
+		color: #f5f5f5;
         font-size: 80px;
         letter-spacing: 3px;
         padding-top: 30%;
@@ -64,7 +64,7 @@ body{
 #button-login{
 	.waves-effect{
 	background-color: #f5f5f5;
-    color: #c5454a;
+    color: $rojo;
     width: 50%;
     border-style: none;
     margin-top: 8px;
@@ -72,6 +72,7 @@ body{
     letter-spacing: 2px;
     margin-bottom: 10px;
 	border-radius: 3px;
+	
 
 	}
 }
