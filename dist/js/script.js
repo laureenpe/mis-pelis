@@ -20310,7 +20310,6 @@ function saveToLocalStorage() {
         if ($('#country').val() != '') {//si el valor es diferente de vacìo
             localStorage.setItem('country', $('#country').val());
         }
-        alert('Datos actualizados');
 
     } else {
         //No hay soporte de navegador
@@ -20335,9 +20334,20 @@ function validateForm() {
         alert('El nombre debe ser válido');
         valid = false;
     }
+    if ($('#username').val() == '') {
+        $("#username").css("border", "1px solid red");
+        alert('Username no debe estar vacío');
+        valid = false;
+    }
+
     if (!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test($('#email').val()))) {
         $("#email").css("border", "1px solid red");
         alert('Error en el email');
+        valid = false;
+    }
+    if ($('#country').val() == '') {
+        alert('Country no debe estar vacío');
+        $("#country").css("border", "1px solid red");
         valid = false;
     }
     return valid;
@@ -20351,7 +20361,7 @@ function onLogin() {
 }
 //Function to save images in local storage
 function handleFileSelect() {
-    var files = $('#files')[0].files; 
+    var files = $('#files')[0].files;
     // Gets the image selected on input and assign them to image. Get from https://www.html5rocks.com/en/tutorials/file/dndfiles/
     for (var i = 0, file; file = files[i]; i++) {
         // Si la imagen coincide, proseguir
