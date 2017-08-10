@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('#sign-session').click(onLogin);//listener to button click
     getFromLocalStorage(); //obtener local storage
 });
+
 //This function save to local storage
 function saveToLocalStorage() {
     if (typeof (Storage) !== "undefined") {//soporte del navegador
@@ -39,26 +40,14 @@ function getFromLocalStorage() {
     $('#country').val(localStorage.getItem('country'));
 }
 
-//This function validate the login 
-function login() {
-    if (!(/^([a-zñáéíóú]{2,13})+$/.test($("#firstname").val()))) {
-        $("#firstname").append($("#firstname").val("Ingrese un nombre válido"));
-    }
-    if (!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test($("#email").val()))) {
-        $("#email").append($("#email").val("Ingrese un correo válido"));
-    } else {
-        $("#next").attr("href", "movies.html");
-    }
-}
 //This function validate the name and email and put a red border in case of error
-function validateForm() {
+function onLogin() {
     var valid = true;
     if (!(/^([a-zñáéíóú]{2,13})+$/.test($("#firstname").val()))) {
         $("#firstname").css("border", "1px solid red");
         alert('El nombre debe ser válido');
         valid = false;
     }
-
     if (!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test($('#email').val()))) {
         $("#email").css("border", "1px solid red");
         alert('Error en el email');
