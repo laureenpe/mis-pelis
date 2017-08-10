@@ -37,7 +37,7 @@ body{
 	border-radius:3px;
 	}
 	a{
-		color:$blanco;
+		color:$rojo;
 	}
 }
 /*Login*/
@@ -100,8 +100,22 @@ nav{
 
 #registro{
 	background-color:$gris-claro;
+	.btn{
+	background-color:$gris-oscuro;	
+	padding: 0 1rem;
+	box-shadow: none;
+	}
+	#btn-save{
+		margin-top: 20px;
+	}
+	#files{
+		color: red;
+	}
+	
 }
-
+.gris	{
+		background-color: $gris-claro;
+	}
 .input-field{
 	margin-top:15%;
 	span{
@@ -257,3 +271,5 @@ nav{
 	background-color:$gris-claro;
 }
 /*FIN SECCION PELICULAS*/
+
+/*Registro*/
