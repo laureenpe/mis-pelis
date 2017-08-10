@@ -1,6 +1,7 @@
 $(document).ready(function() {
+	
+});
 	var req = new XMLHttpRequest();
-
 	var URL = "https://netflixroulette.net/api/api.php?";
 	var queryType = "director=";
 	var director = "Quentin%20Tarantino";
