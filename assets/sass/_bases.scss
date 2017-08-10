@@ -4,6 +4,8 @@
 	font-family:$font-familyOpen;
 }
 
+//index 1
+
 #intro{
 	background-color: #C5454A;
 	padding-bottom:30%;
@@ -36,3 +38,51 @@
 		color:$blanco;
 	}
 }
+
+//registro
+nav{
+	background-color:$gris-oscuro;
+	width:100%;
+}
+
+.titulo-seccion{
+	color:white;
+	font-size: 18px;
+}
+
+.navbar{
+	    display: flex;
+}
+
+#registro{
+	background-color:$gris-claro;
+}
+
+.input-field{
+	margin-top:15%;
+	span{
+		color: $rojo;
+	}
+	input{
+		background-color:whitesmoke !important;
+		border: none !important;
+		border-radius: 3px !important;
+		height: 30px !important;
+	}
+}
+
+.botones{
+	.upload{
+		background-color:$gris-oscuro;
+		font-size:12px;
+		text-transform:capitalize;
+		margin-bottom: 50px;
+	}
+	.create{
+		background-color:$gris-oscuro;
+		font-size:16px;
+		width:70%;
+		text-transform:capitalize;
+	}
+}
+
