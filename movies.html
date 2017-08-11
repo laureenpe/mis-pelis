@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--material icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://use.fontawesome.com/8128449ca8.js"></script>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
@@ -33,19 +36,20 @@
 			<div class="row">
 				<div class="col m9 s9">
 					<select class="browser-default" id="select-category">
-					    <option value="" disabled selected>Category </option>
-					    <option value="Horror">Horror</option>
-					    <option value="Dramas">Dramas</option>
-					    
-					</select>
+					    <option id="horror" value="1">Horror</option>
+					    <option id="drama" value="2">Drama</option>
+					    <option id="action" value="3">Action & Adventure</option>
+					    <option id="oscar" value="3">Oscar-winning Movies</option>
+					    <option id="independent" value="3">Independent Movies</option>
+					  </select>
 				</div>
-				<div class="col m3 s3">
+        <div class="col m3 s3">
 					<a class="waves-effect waves-light btn filtrar">Filtrar</a>
-				</div>
+        </div>
 			</div>
 			<div class="row">
 				<div class="col m12 s12">
-					<div class="mostrar-pelis">
+					<div id="movies" class="mostrar-pelis">
 						
 					</div>
 				</div>

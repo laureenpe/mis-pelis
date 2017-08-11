@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	var req = new XMLHttpRequest();
 	var URL = "https://netflixroulette.net/api/api.php?";
 	var queryType = "director=";
@@ -30,6 +31,17 @@ $(document).ready(function() {
 			});
 			
 		});
+     var img = ele.poster;
+     var nombrePelicula = ele.show_title;
+     var summary = ele.summary;
+     var categoria = ele.category;
+     var director = ele.director;
+     var actores = ele.show_cast;
+      $(".movie-title").click(function(){
+                $(".detalles").append("<img src='"+img+"'>");
+                $(".moviesDetalles").append(nombrePelicula + summary + categoria + director);
+                $(".actorsName").append("<a>"+actores+"</a>");
+      });
 	});
 	req.send(null);
 
@@ -43,3 +55,4 @@ $(document).ready(function() {
 	function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 	}
+
