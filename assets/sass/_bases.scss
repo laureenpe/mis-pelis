@@ -3,6 +3,99 @@
 	padding:0;
 	font-family:$font-familyOpen;
 }
+body{
+	background-color: #C5454A;
+}
+/*Index*/
+//index 1
+#intro{
+	background-color: #C5454A;
+	padding-bottom:30%;
+
+}
+
+.intro-pelis{
+	p{
+		font-family:$font-familyAnton;
+		font-size: 80px;
+		color: $blanco;
+		letter-spacing:3px;
+		padding-top: 30%;
+		padding-bottom: 10%;
+		
+	}
+	button{
+	background-color: $blanco;
+	color: $rojo;
+	padding: 10px;
+	width: 100%;
+	border-style: none;
+	margin-top:8px;
+	font-size: 17px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	border-radius:3px;
+	}
+	a{
+		color:$rojo;
+	}
+}
+/*Login*/
+#login{
+	background-color: $rojo;
+	h5{
+		font-family: Anton,sans-serif;
+		text-transform: uppercase;
+		color: #f5f5f5;
+        font-size: 80px;
+        letter-spacing: 3px;
+        padding-top: 15%;
+        padding-bottom: 10%;
+
+	}
+	#username label{
+		color: white;
+	}
+
+	input[type=text]:not(.browser-default):focus:not([readonly]){
+		border-bottom: 1px solid white;
+		box-shadow: none;
+	}
+	input[type=text]:not(.browser-default):focus:not([readonly])+label{
+		color: white;
+		font-size: 13px;
+	}
+	
+}
+#button-login{
+	.waves-effect{
+	background-color: #f5f5f5;
+    color: $rojo;
+    width: 50%;
+    border-style: none;
+    margin-top: 8px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+	border-radius: 3px;
+
+	}
+	.float{
+		float: right;
+		width: 59px;
+		border-radius: 50%;
+		
+	}
+	.gray{
+		background-color:white;
+		
+	}
+	.btn-floating.btn-large i {
+    line-height: 56px;
+    color:$rojo;
+}
+}
+
 
 nav{
 	background-color:$color-azul;
@@ -11,12 +104,61 @@ nav{
 
 .titulo-seccion{
 	color:white;
-	font-size: 23px;
+	font-size: 18px;
 }
 
 .navbar{
 	    display: flex;
 }
+
+
+#registro{
+	background-color:$gris-claro;
+	.btn{
+	background-color:$gris-oscuro;	
+	padding: 0 1rem;
+	box-shadow: none;
+	}
+	#btn-save{
+		margin-top: 20px;
+	}
+	#files{
+		color: red;
+		padding-top: 10px;
+	}
+	
+	
+}
+.gris	{
+		background-color: $gris-claro;
+	}
+.input-field{
+	margin-top:15%;
+	span{
+		color: $rojo;
+	}
+	input{
+		background-color:whitesmoke !important;
+		border-radius: 3px !important;
+		height: 30px !important;
+	}
+}
+
+.botones{
+	.upload{
+		background-color:$gris-oscuro;
+		font-size:12px;
+		text-transform:capitalize;
+		margin-bottom: 50px;
+	}
+	.create{
+		background-color:$gris-oscuro;
+		font-size:16px;
+		width:70%;
+		text-transform:capitalize;
+	}
+}
+
 
 /* The side navigation menu */
 .sidenav {
@@ -89,3 +231,81 @@ nav{
     }
 
 }
+/* SECCION PELICULAS */
+
+.peliculas{
+	width:100%;
+	background-color:white;
+}
+
+.titulos{
+	display: flex;
+}
+
+.movie-title{
+	font-weight: 900;
+	color:black;
+}
+.movie-year{
+	margin-left: 2%;
+    font-size: 10px;
+    margin-top: 5px;
+    color: gray;
+}
+.category{
+	margin-left: 2%;
+    font-size: 10px;
+    margin-top: 5px;
+    color: gray;
+}
+
+.lineavert{
+	background-color: gray;
+    width: 2px;
+    height: 14px;
+    margin-left: 1%;
+    margin-right: -1%;
+    margin-top: 1%;
+}
+.add-favorite{
+	background-color: $rojo;
+    border: none;
+    border-radius: 6px;
+    width: 46%;
+    color: white;
+}
+
+.movie-details{
+	display: flex;
+}
+
+.fa-clock-o{
+	color: $rojo;
+    font-size: 98%;
+    margin-right: 1%;
+}
+
+.movie-minutes{
+	font-size: 12px;
+	color:$rojo;
+	margin-right: 2%;
+}
+
+.movie-director{
+	font-size: 12px;
+	color:$rojo;
+	margin-right: 2%;
+}
+
+.fa-film{
+	color: $rojo;
+    font-size: 98%;
+    margin-right: 1%;
+}
+
+.movie:hover{
+	background-color:$gris-claro;
+}
+/*FIN SECCION PELICULAS*/
+
+/*Registro*/

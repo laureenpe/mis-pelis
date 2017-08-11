@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--material icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://use.fontawesome.com/8128449ca8.js"></script>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
@@ -28,6 +31,29 @@
 			</div>
 		</div>
 	</nav>
+	<section class="peliculas">
+		<div class="container">
+			<div class="row">
+				<div class="col m12 s12">
+					<select class="browser-default">
+					    <option value="" disabled selected>Category </option>
+					    <option id="horror" value="1">Horror</option>
+					    <option id="drama" value="2">Drama</option>
+					    <option id="action" value="3">Action & Adventure</option>
+					    <option id="oscar" value="3">Oscar-winning Movies</option>
+					    <option id="independent" value="3">Independent Movies</option>
+					  </select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m12 s12">
+					<div id="movies" class="mostrar-pelis">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<script src="dist/js/script.js"></script>
 </body>
 </html>
