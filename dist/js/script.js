@@ -20253,8 +20253,18 @@ if (jQuery) {
   };
 })(jQuery);
 
-$(document).ready(function() {
-	var req = new XMLHttpRequest();
+
+$(document).ready(function () {
+    $('#sign-session').click(onLogin);//listener to button click
+
+var photo_url = ''; //save pictures
+$(document).ready(function () {
+    $("#btn-upload").click(handleFileSelect);//handleFileSelect, extract the files on input
+    $('#sign-session').click(onLogin);//listener to button click
+    $("#sign-session").click(saveToLocalStorage); //guarda a local storage
+
+    getFromLocalStorage(); //obtener local storage
+  	var req = new XMLHttpRequest();
 	var URL = "https://netflixroulette.net/api/api.php?";
 	var queryType = "director=";
 	var director = "Quentin%20Tarantino";
@@ -20271,11 +20281,21 @@ $(document).ready(function() {
 			var director = ele.director;
 			$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='' class='movie-title'>"+titulo+"</a><p class='movie-year'>"+anio+"</p><div class='lineavert'></div><p class='category'>"+categoria+"</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>"+duracion+"</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>"+director+"</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i></div></div></div>")
 		});
+     var img = e.poster;
+     var nombrePelicula = e.show_title;
+     var summary = e.summary;
+     var categoria = e.category;
+     var director = e.director;
+     var actores = e.show_cast;
+     $(".detalles").append("<img src='"+img+"'>");
+     $(".moviesDetalles").append(nombrePelicula + summary + categoria + director);
+     $(".actorsName").append("<a>"+actores+"</a>");
 	});
 	req.send(null);
+           
 });
-
-	//funcion para que se despliegue el menu lateral
+  
+  //funcion para que se despliegue el menu lateral
 	function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 	}
@@ -20295,6 +20315,7 @@ $(document).ready(function () {
 //This function save to local storage
 function saveToLocalStorage() {
     if (typeof (Storage) !== "undefined") {//soporte del navegador
+
         if (photo_url != '') {//si la foto es diferente de vacìo
             localStorage.setItem('photo', photo_url);
         }
@@ -20309,8 +20330,7 @@ function saveToLocalStorage() {
         }
         if ($('#country').val() != '') {//si el valor es diferente de vacìo
             localStorage.setItem('country', $('#country').val());
-        }
-        
+        }  
 
     } else {
         //No hay soporte de navegador
@@ -20335,6 +20355,7 @@ function validateForm() {
         alert('El nombre debe ser válido');
         valid = false;
     }
+
     if ($('#username').val() == '') {
         $("#firstname").css("border", "1px solid red");
         alert('Username no debe estar vacío');
