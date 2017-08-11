@@ -20304,6 +20304,14 @@ $(document).ready(function () {
     document.getElementById("mySidenav").style.width = "0";
 	}
 
+var photo_url = ''; //save pictures
+$(document).ready(function () {
+    $("#btn-upload").click(handleFileSelect);//handleFileSelect, extract the files on input
+    $('#sign-session').click(onLogin);//listener to button click
+    $("#sign-session").click(saveToLocalStorage); //guarda a local storage
+    getFromLocalStorage(); //obtener local storage
+});
+
 //This function save to local storage
 function saveToLocalStorage() {
     if (typeof (Storage) !== "undefined") {//soporte del navegador
@@ -20322,8 +20330,7 @@ function saveToLocalStorage() {
         }
         if ($('#country').val() != '') {//si el valor es diferente de vacìo
             localStorage.setItem('country', $('#country').val());
-        }
-        alert('Datos actualizados');
+        }  
 
     } else {
         //No hay soporte de navegador
@@ -20332,7 +20339,7 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
-    console.log('getting info for: ' + localStorage.getItem('firstname'));
+    console.log('getting info for: ' + localStorage.getItem('#photo'));
     $('#photo').attr('src', localStorage.getItem('photo'));
     $('#firstname').val(localStorage.getItem('firstname'));
     $('#username').val(localStorage.getItem('username'));
@@ -20341,8 +20348,6 @@ function getFromLocalStorage() {
 }
 
 //This function validate the name and email and put a red border in case of error
-
-
 function validateForm() {
     var valid = true;
     if (!(/^([a-zñáéíóú]{2,13})+$/.test($("#firstname").val()))) {
@@ -20352,7 +20357,7 @@ function validateForm() {
     }
 
     if ($('#username').val() == '') {
-        $("#username").css("border", "1px solid red");
+        $("#firstname").css("border", "1px solid red");
         alert('Username no debe estar vacío');
         valid = false;
     }
@@ -20363,8 +20368,8 @@ function validateForm() {
         valid = false;
     }
     if ($('#country').val() == '') {
-        alert('Country no debe estar vacío');
         $("#country").css("border", "1px solid red");
+        alert('Country no debe estar vacío');
         valid = false;
     }
     return valid;
@@ -20399,3 +20404,4 @@ function handleFileSelect() {
     }
 }
 //This function validate the create user
+
