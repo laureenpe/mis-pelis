@@ -20301,6 +20301,7 @@ $(document).ready(function() {
 			});
 			
 		});
+
 		req.send(null);
 });
 
@@ -20341,6 +20342,7 @@ function saveToLocalStorage() {
             localStorage.setItem('country', $('#country').val());
         }
         
+
 
     } else {
         //No hay soporte de navegador
