@@ -2,10 +2,94 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Details</title>
+	<title>Details</title>	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://use.fontawesome.com/8128449ca8.js"></script>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
+
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="movies.html">Movies</a>
+	  <a href="profile.html">Profile</a>
+	</div>
+	<nav>
+		<div class="container">
+			<div class="row navbar">
+				<div class="col m4 s4 center-align">
+					<span onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+				</div>
+				<div class="col m4 s4 center-align">
+					<p class="titulo-seccion">MOVIES</p>
+				</div>
+				<div class="col m4 s4 center-align">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+    <section class="sectionDetails">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col m12 s12" id="borderdelete">
+                        <h1 class="center-align"">DETAILS</h1>
+                    <div class="detalles">
+                        <!-- img -->
+                    </div>
+                    <div class="row" id="backColor">
+                        <div class="col m6 s6" id="borderdelete">
+                            <div class="movieWatch">
+                                <h3>Watch<i class='material-icons'>keyboard_arrow_right</i></h3>
+                            </div>
+                        </div>                          
+                        <div class="col m6 s6" id="borderdelete">
+                            <div class="iconComienzo">
+                                <i class="material-icons">play_circle_outline</i>                         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="center-items">
+                        <div class="col m6 s6" id="borderdelete">
+                            <div class="iconStar">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                            </div>
+                        </div>                
+                    
+                        <div class="col m6 s6" id="borderdelete">
+                            <div class="movieBtn">
+                                <a class="waves-effect waves-light btn">Add Favorites</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col m12 s12">
+                            <div class="moviesDetalles">                            
+                                <!-- info pelicula -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m6 s6">
+                            <div class="actor">
+                                <a href="" class="actorsName"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+	
 	<script src="dist/js/script.js"></script>
 </body>
 </html>
