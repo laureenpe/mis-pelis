@@ -69,16 +69,23 @@ nav{
 }
 
 /*INICIO PROFILE*/
-.imagen-profile{
-    background-color: white;
-}
-.img-profile{
-    margin-top: 3rem;
-}
-.text-profile{
-    font-size: 15px;
-}
-.linea-roja{
-    background-color:red;
-    height: 10vh;
+.profile{
+    .imagen-profile{
+        background-color: white;
+    }
+    .img-profile{
+        margin-top: 2rem;
+    }
+    .text-profile{
+        font-size: 15px;
+    }
+    .linea-roja{
+        background-color: #c14748;
+        height: 8vh;
+        margin-top: 2rem;
+    }
+    .favorites{
+        color:white;
+    }
+
 }
