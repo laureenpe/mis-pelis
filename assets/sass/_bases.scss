@@ -169,7 +169,7 @@ nav{
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 4; /* Stay on top */
     top: 0;
     left: 0;
     background-color: #111; /* Black*/
@@ -316,6 +316,14 @@ nav{
 	background-color:white;
 }
 
+.filtrar{
+    width: 58%;
+    height: 40px;
+    border: none;
+    margin-top: 1%;
+    background-color:$rojo;
+    color:white;
+}
 .titulos{
 	display: flex;
 }
