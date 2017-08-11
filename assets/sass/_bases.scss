@@ -389,7 +389,20 @@ nav{
 /*Registro*/
 
 /*INICIO ACTOR*/
-.name-actor{
+.actor{
+    .name-actor{
     background-color: $rojo;
-    height:30vh;
+    height:50vh;
+}
+h2{ 
+        color: white;
+        margin-top:10rem;
+    }
+    .movies-actors{
+        background-color:white;
+        height:40vh;
+    }
+    p{
+        display:block;
+    }
 }
