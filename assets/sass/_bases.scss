@@ -37,7 +37,7 @@ body{
 	border-radius:3px;
 	}
 	a{
-		color:$blanco;
+		color:$rojo;
 	}
 }
 /*Login*/
@@ -61,6 +61,11 @@ body{
 		border-bottom: 1px solid white;
 		box-shadow: none;
 	}
+	input[type=text]:not(.browser-default):focus:not([readonly])+label{
+		color: white;
+		font-size: 13px;
+	}
+	
 }
 #button-login{
 	.waves-effect{
@@ -73,9 +78,22 @@ body{
     letter-spacing: 2px;
     margin-bottom: 10px;
 	border-radius: 3px;
-	
 
 	}
+	.float{
+		float: right;
+		width: 59px;
+		border-radius: 50%;
+		
+	}
+	.gray{
+		background-color:white;
+		
+	}
+	.btn-floating.btn-large i {
+    line-height: 56px;
+    color:$rojo;
+}
 }
 
 
@@ -96,8 +114,24 @@ nav{
 
 #registro{
 	background-color:$gris-claro;
+	.btn{
+	background-color:$gris-oscuro;	
+	padding: 0 1rem;
+	box-shadow: none;
+	}
+	#btn-save{
+		margin-top: 20px;
+	}
+	#files{
+		color: red;
+		padding-top: 10px;
+	}
+	
+	
 }
-
+.gris	{
+		background-color: $gris-claro;
+	}
 .input-field{
 	margin-top:15%;
 	span{
@@ -105,7 +139,6 @@ nav{
 	}
 	input{
 		background-color:whitesmoke !important;
-		border: none !important;
 		border-radius: 3px !important;
 		height: 30px !important;
 	}
@@ -253,3 +286,5 @@ nav{
 	background-color:$gris-claro;
 }
 /*FIN SECCION PELICULAS*/
+
+/*Registro*/

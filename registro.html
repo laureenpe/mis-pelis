@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +10,19 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
-<body>
+
+<body class="gris">
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="movies.html">Movies</a>
+	  <a href="profile.html">Profile</a>
+	</div>
 	<nav>
 		<div class="container">
 			<div class="row navbar">
 				<div class="col m3 s3 center-align">
-					<span><i class="fa fa-bars" aria-hidden="true"></i></span>
+					<span onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
 				</div>
 				<div class="col m6 s6 center-align">
 					<p class="titulo-seccion">CREATE ACCOUNT</p>
@@ -32,25 +40,32 @@
 				<div class="col s1 offset-s1 col m10 s10">
 					<div class="input-field">
 						<span>Name</span>
-						<input type="text" class="registro-name">
+						<input id="firstname" type="text" class="registro-name">
 						<span>Username</span>
-						<input type="text" class="registro-username">
+						<input id="username" type="text" class="registro-username">
 						<span>E-mail</span>
-						<input type="text" class="registro-email">
+						<input id="email" type="text" class="registro-email">
 						<span>Country</span>
-						<input type="text" class="registro-country">
+						<input id="country" type="text" class="registro-country">
 					</div>
 				</div>
 				<div class=" col s2 offset-s2 col m8 s8 center-align botones">
-					<a class="waves-effect waves-light btn upload">Upload Photo</a>
+					<form action="#">
+						<div class="btn  file">
+							<span id="btn-upload" class="waves-effect waves-light btn upload">Upload Photo</span>
+						</div>
+						<input type="file" id="files" name="files[]" multiple />
 				</div>
-				<div class=" col s2 offset-s2 col m8 s8 center-align botones">
-					<a class="waves-effect waves-light btn create">Create</a>
-				</div>
+				</form>
 			</div>
+			<div class=" col s2 offset-s2 col m8 s8 center-align botones">
+				<a id="sign-session" class="waves-effect waves-light btn create">Create</a>
+			</div>
+		</div>
 		</div>
 	</section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	<script src="dist/js/script.js"></script>
 </body>
+
 </html>
