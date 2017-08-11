@@ -24,6 +24,7 @@ function saveToLocalStorage() {
         if ($('#country').val() != '') {//si el valor es diferente de vacìo
             localStorage.setItem('country', $('#country').val());
         }
+        
 
     } else {
         //No hay soporte de navegador
@@ -32,7 +33,7 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
-    console.log('getting info for: ' + localStorage.getItem('firstname'));
+    console.log('getting info for: ' + localStorage.getItem('#photo'));
     $('#photo').attr('src', localStorage.getItem('photo'));
     $('#firstname').val(localStorage.getItem('firstname'));
     $('#username').val(localStorage.getItem('username'));
