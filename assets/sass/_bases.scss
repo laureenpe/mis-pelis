@@ -397,12 +397,16 @@ nav{
 h2{ 
         color: white;
         margin-top:10rem;
+        text-align:center;
     }
     .movies-actors{
         background-color:white;
         height:40vh;
+        position:absolute;
+        bottom:0;
     }
     p{
         display:block;
+        padding-top: 20px;
     }
 }
