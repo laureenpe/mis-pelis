@@ -210,6 +210,29 @@ nav{
     .sidenav a {font-size: 18px;}
 }
 
+
+/*INICIO PROFILE*/
+.profile{
+    .imagen-profile{
+        background-color: white;
+    }
+    .img-profile{
+        margin-top: 2rem;
+    }
+    .text-profile{
+        font-size: 15px;
+    }
+    .linea-roja{
+        background-color: #c14748;
+        height: 8vh;
+        margin-top: 2rem;
+    }
+    .favorites{
+        color:white;
+    }
+
+}
+
 /* SECCION PELICULAS */
 
 .peliculas{
