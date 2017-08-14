@@ -33,7 +33,6 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
-    console.log('getting info for: ' + localStorage.getItem('#photo'));
     $('#photo').attr('src', localStorage.getItem('photo'));
     $('#firstname').val(localStorage.getItem('firstname'));
     $('#username').val(localStorage.getItem('username'));

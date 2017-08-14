@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Movies</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--material icon-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--material icon-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://use.fontawesome.com/8128449ca8.js"></script>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
+
 <body>
 	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="index.html">Home</a>
-	  <a href="movies.html">Movies</a>
-	  <a href="profile.html">Profile</a>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a>
+		<a href="movies.html">Movies</a>
+		<a href="profile.html">Profile</a>
 	</div>
 	<nav>
 		<div class="container">
@@ -36,18 +38,21 @@
 			<div class="row">
 				<div class="col m12 s12">
 					<select class="browser-default" id="select-category">
-					    <option id="horror" value="1">Horror</option>
-					    <option id="drama" value="2">Drama</option>
-					    <option id="action" value="3">Action & Adventure</option>
-					    <option id="oscar" value="3">Oscar-winning Movies</option>
-					    <option id="independent" value="3">Independent Movies</option>
+					    <option  value="Horror">Horror</option>
+					    <option  value="Drama">Drama</option>
+					    <option  value="Action & Adventure">Action & Adventure</option>
+					    <option  value="Oscar-winning Movies">Oscar-winning Movies</option>
+					    <option  value="Independent Movies">Independent Movies</option>
 					  </select>
+				</div>
+				<div class="col m12 s12">
+					<a id="filtrar" href="#" class="waves-effect waves-light btn">Filtrar</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col m12 s12">
 					<div id="movies" class="mostrar-pelis">
-						
+
 					</div>
 				</div>
 			</div>
@@ -55,4 +60,5 @@
 	</section>
 	<script src="dist/js/script.js"></script>
 </body>
+
 </html>
