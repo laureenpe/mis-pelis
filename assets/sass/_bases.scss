@@ -5,12 +5,11 @@
 }
 
 body{
-	background-color: #C5454A;
+	background-color:$yellow;
 }
 /*Index*/
-//index 1
 #intro{
-	background-color: #C5454A;
+	background-color:$yellow;
 	padding-bottom:30%;
 
 }
@@ -26,8 +25,8 @@ body{
 		
 	}
 	button{
-	background-color: $blanco;
-	color: $rojo;
+    background-color: $blanco;
+    font-weight: bold;
 	padding: 10px;
 	width: 100%;
 	border-style: none;
@@ -38,7 +37,7 @@ body{
 	border-radius:3px;
 	}
 	a{
-		color:$rojo;
+		color:#E20049;
 	}
 }
 /*Login*/
@@ -78,7 +77,8 @@ body{
     font-size: 17px;
     letter-spacing: 2px;
     margin-bottom: 10px;
-	border-radius: 3px;
+    border-radius: 3px;
+    right: 20px;
 
 	}
 	.float{
@@ -99,7 +99,7 @@ body{
 
 
 nav{
-	background-color:$color-azul;
+	background-color:$yellow;
 	width:100%;
 }
 
@@ -112,13 +112,10 @@ nav{
 	    display: flex;
 }
 
-
-
-
 #registro{
 	background-color:$gris-claro;
 	.btn{
-	background-color:$gris-oscuro;	
+	background-color:$yellow;	
 	padding: 0 1rem;
 	box-shadow: none;
 	}
@@ -129,8 +126,7 @@ nav{
 		color: red;
 		padding-top: 10px;
 	}
-	
-	
+		
 }
 .gris	{
 		background-color: $gris-claro;
@@ -138,7 +134,7 @@ nav{
 .input-field{
 	margin-top:15%;
 	span{
-		color: $rojo;
+		color: #E20049;
 	}
 	input{
 		background-color:whitesmoke !important;
@@ -172,7 +168,7 @@ nav{
     z-index: 4; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: white; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -183,7 +179,7 @@ nav{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #E20049;
     display: block;
     transition: 0.3s
 }
@@ -309,21 +305,41 @@ nav{
         font-size: 15px;
     }
     .linea-roja{
-        background-color: #c14748;
+        background-color: $yellow;
         height: 8vh;
         margin-top: 2rem;
     }
     .favorites{
         color:white;
     }
+    
 
 }
+.fa-star{
+        color:$text-btn;
+    }
 
 /* SECCION PELICULAS */
 
 .peliculas{
+    padding-top: 20px;
 	width:100%;
-	background-color:white;
+    background-color:white;
+    .waves-effect{
+        right: 39px;
+    }
+    #filtrar {
+        background-color: whitesmoke;
+        color: $text-btn;
+    }
+    .fa-filter{
+        font-size: 30px;
+        background-color: white;
+    }
+    .fa-star{
+        color:$text-btn;
+    }
+    
 }
 
 .filtrar{
@@ -364,11 +380,12 @@ nav{
     margin-top: 1%;
 }
 .add-favorite{
-	background-color: $rojo;
+	background-color: $yellow;
     border: none;
     border-radius: 6px;
 	width: 82%;
     color: white;
+    
 }
 
 .movie-details{
@@ -401,6 +418,9 @@ nav{
 
 .movie:hover{
 	background-color:$gris-claro;
+}
+select{
+    width: 89%;
 }
 /*FIN SECCION PELICULAS*/
 
