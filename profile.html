@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Profile</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--material icon-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://use.fontawesome.com/8128449ca8.js"></script>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
@@ -33,25 +35,43 @@
 	</nav>
 	<!-- Inicio PROFILE -->
 	<section class="profile">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
-				<div class="imagen-profile center-align col s12">
-					<img id="photo" class="circle center-align img-profile" src="dist/img/perfil1.jpg" alt="perfil" width="180">
-				</div>
-				<div class="imagen-profile center-align col s12">
-					<h5 class="text-profile">Username: Karina</h5>
-					<h5 class="text-profile">Name: Kari</h5>
-					<h5 class="text-profile">Country: Chile</h5>
-				</div>
-				<div class="linea-roja col s12">
-					<h5 class="favorites center">My Favorites</h5>
+				<div class="imagen-profile center col s12">
+					<img id="photo" class="circle center-text img-profile" src="dist/img/perfil1.jpg" alt="perfil" width="180">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col m12 s12">
-					<div id="movies" class="mostrar-pelis">
-						
-					</div>
+
+		</div>
+
+	</section>
+	<section class="container-data center">
+		<div class="row">
+			<div class=" col s12 m12 l12">
+				<div class=" col s12 m12 l12">
+					<input id="username" type="text" class=" validate">
+				</div>
+				<div class=" col s12 m12 l12 ">
+					<input id="firstname" type="text" class=" validate">
+				</div>
+				<div class=" col s12 m12 l12 ">
+					<input id="country" type="text" class=" validate">
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+	<section>
+		<div class="row">
+			<div class="linea-roja col s12">
+				<h5 class="favorites center">My Favorites</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m12 s12">
+				<div id="movies" class="mostrar-pelis">
+
 				</div>
 			</div>
 		</div>
