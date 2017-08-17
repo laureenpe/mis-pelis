@@ -101,6 +101,7 @@ body{
 	.btn-floating.btn-large i {
     line-height: 56px;
     color:$rojo;
+   
 }
 }
 
@@ -339,6 +340,8 @@ nav{
     background-color:white;
     .waves-effect{
         right: 39px;
+        background-color: #F2F2F2;
+        
     }
     #filtrar {
         background-color: whitesmoke;
@@ -352,6 +355,16 @@ nav{
         color:$text-btn;
     }
     
+    
+    
+}
+    .search-button {
+    background-color:$text-btn !important;
+    width: 43px !important;
+    height: 43px !important;
+}
+    .btn-floating.btn-large i {
+    line-height: 49px;
 }
 
 .filtrar{
@@ -417,7 +430,6 @@ nav{
 }
 
 .movie-director{
-	font-size: 12px;
 	color:$rojo;
 	margin-right: 2%;
 }
@@ -460,4 +472,14 @@ h2{
         padding-top: 20px;
         margin-bottom: -4px;
     }
+}
+#director {
+    width: 72%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid $yellow;
+    color: $text-btn;
+    font-size: 9px;
+    
 }
