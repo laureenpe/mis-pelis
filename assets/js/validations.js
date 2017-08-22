@@ -48,19 +48,15 @@ function validateForm() {
         alert('El nombre debe ser válido');
         valid = false;
     }
-    if ($('#username').val() == '') {
-        $("#firstname").css("border", "1px solid red");
-        alert('Username no debe estar vacío');
-        valid = false;
-    }
+    
 
     if (!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test($('#email').val()))) {
         $("#email").css("border", "1px solid red");
         alert('Error en el email');
         valid = false;
     }
-    if ($('#country').val() == '') {
-        $("#country").css("border", "1px solid red");
+    if ($('#password').val() == '') {
+        $("#password").css("border", "1px solid red");
         alert('Country no debe estar vacío');
         valid = false;
     }
