@@ -65,7 +65,7 @@ function validateForm() {
 // If validations are true, then go to movies.html and save it into 
 function onLogin() {
     if (validateForm()) { //If validate form is True
-        $("#sign-session").attr("href", "movies.html");
+        $("#sign-session").attr("href", "profile.html");
         saveToLocalStorage(); //guarda a local storage
     }
 }

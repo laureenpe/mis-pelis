@@ -1,482 +1,559 @@
-*{
-	margin:0;
-	padding:0;
-	font-family:$font-familyOpen;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-familyOpen;
 }
 
-body{
-	background-color:$yellow;
+body {
+  background-color: $yellow;
 }
 /*Index*/
-#intro{
-	background-color:$yellow;
-	padding-bottom:30%;
-
+#intro {
+  background-color: $yellow;
+  padding-bottom: 30%;
 }
 
-.intro-pelis{
-	p{
-		font-family:$font-familyAnton;
-		font-size: 80px;
-		color: $blanco;
-		letter-spacing:3px;
-		padding-top: 30%;
-		padding-bottom: 10%;
-		
-	}
-	button{
+.intro-pelis {
+  p {
+    font-family: $font-familyAnton;
+    font-size: 80px;
+    color: $text-purple;
+    letter-spacing: 3px;
+    padding-top: 30%;
+    padding-bottom: 10%;
+  }
+
+  button {
     background-color: $blanco;
     font-weight: bold;
-	padding: 10px;
-	width: 100%;
-	border-style: none;
-	margin-top:8px;
-	font-size: 17px;
-	letter-spacing: 2px;
-	margin-bottom: 10px;
-	border-radius:3px;
-	}
-	a{
-		color:#E20049;
-	}
-}
-/*Login*/
-#login{
-	background-color: $rojo;
-	h5{
-		font-family: Anton,sans-serif;
-		text-transform: uppercase;
-		color: #f5f5f5;
-        font-size: 80px;
-        letter-spacing: 3px;
-        padding-top: 15%;
-        padding-bottom: 10%;
-
-	}
-	#username label{
-        color: white;
-        
-    }
-   
-
-	input[type=text]:not(.browser-default):focus:not([readonly]){
-		border-bottom: 1px solid white;
-		box-shadow: none;
-	}
-	input[type=text]:not(.browser-default):focus:not([readonly])+label{
-		color: white;
-		font-size: 13px;
-	}
-	
-}
- #username,#firstname,#country{
-        text-align:center;
-        border: none;
-        margin-top: 1px;
-    }
-#button-login{
-	.waves-effect{
-	background-color: #f5f5f5;
-    color: $rojo;
-    width: 50%;
+    padding: 10px;
+    width: 100%;
     border-style: none;
     margin-top: 8px;
     font-size: 17px;
     letter-spacing: 2px;
     margin-bottom: 10px;
     border-radius: 3px;
-    right: 20px;
+  }
 
-	}
-	.float{
-		float: right;
-		width: 59px;
-		border-radius: 50%;
-		
-	}
-	.gray{
-		background-color:white;
-		
-	}
-	.btn-floating.btn-large i {
+  a {
+    color: $weldon-blue;
+  }
+}
+/*Login*/
+#login {
+  background-color: $yellow;
+
+  h5 {
+    font-family: Anton,sans-serif;
+    text-transform: uppercase;
+    color: $text-purple;
+    font-size: 80px;
+    letter-spacing: 3px;
+    padding-top: 15%;
+    padding-bottom: 10%;
+  }
+
+  #username label {
+    color: white;
+  }
+
+  input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid white;
+    box-shadow: none;
+  }
+
+  input[type=text]:not(.browser-default):focus:not([readonly])+label {
+    color: white;
+    font-size: 13px;
+  }
+}
+
+#username,
+#firstname,
+#country {
+  //text-align:center;
+  border: none;
+  margin-top: 1px;
+  color: $text-purple;
+}
+
+#button-login {
+  button {
+    background-color: #f5f5f5;
+    font-weight: 700;
+    padding: 10px;
+    width: 100%;
+    border-style: none;
+    margin-top: 8px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+
+    a {
+      color: $weldon-blue;
+    }
+  }
+
+  .float {
+    float: right;
+    width: 59px;
+    border-radius: 50%;
+  }
+
+  .gray {
+    background-color: white;
+  }
+
+  .btn-floating.btn-large i {
     line-height: 56px;
-    color:$rojo;
-   
-}
-}
-
-
-nav{
-	background-color:$yellow;
-	width:100%;
+    color: $japanese-purple;
+  }
 }
 
-.titulo-seccion{
-	color:white;
-	font-size: 23px;
+nav {
+  background-color: $yellow;
+  width: 100%;
 }
 
-.navbar{
-	    display: flex;
+.titulo-seccion {
+  color: $text-purple;
+  font-size: 16px;
 }
 
-#registro{
-	background-color:$gris-claro;
-	.btn{
-	background-color:$yellow;	
-	padding: 0 1rem;
-	box-shadow: none;
-	}
-	#btn-save{
-		margin-top: 20px;
-	}
-	#files{
-		color: red;
-		padding-top: 10px;
-	}
-		
-}
-.gris	{
-		background-color: $gris-claro;
-	}
-.input-field{
-	margin-top:15%;
-	span{
-		color: #E20049;
-	}
-	input{
-		background-color:whitesmoke !important;
-		border-radius: 3px !important;
-		height: 30px !important;
-	}
+.navbar {
+  display: flex;
 }
 
-.botones{
-	.upload{
-		background-color:$gris-oscuro;
-		font-size:12px;
-		text-transform:capitalize;
-		margin-bottom: 50px;
-	}
-	.create{
-		background-color:$gris-oscuro;
-		font-size:16px;
-		width:70%;
-		text-transform:capitalize;
-	}
+#registro {
+  background-color: white;
+
+  .btn {
+    background-color: $blanco;
+    color: $weldon-blue;
+    font-family: Open Sans;
+    padding: 0 1rem;
+    box-shadow: none;
+  }
+
+  #btn-save {
+    margin-top: 20px;
+  }
+
+  #files {
+    color: $japanese-purple;
+    padding-top: 10px;
+  }
+}
+
+.gris {
+  background-color: white;
+}
+
+.input-field {
+  margin-top: 15%;
+
+  span {
+    color: $japanese-purple;
+  }
+
+  input {
+    background-color: whitesmoke !important;
+    border-radius: 3px !important;
+    height: 30px !important;
+  }
+}
+
+.botones {
+  .upload {
+    background-color: $gris-oscuro;
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+  }
+
+  .create {
+    background-color: $gris-oscuro;
+    font-size: 16px;
+    width: 70%;
+    text-transform: capitalize;
+  }
 }
 
 
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 4; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: white; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #E20049;
-    display: block;
-    transition: 0.3s
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: $text-purple;
+  display: block;
+  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-    transition: margin-left .5s;
-    padding: 20px;
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 
 
 /* DETAILS */
-.sectionDetails{
-    background-color: white;
-    #borderdelete{
-        padding-left: 0;
-        padding-right: 0;
-    }.detalles{
-        background-image: url(../img/kill.jpg);
-        width: 100%;
-        height: 452px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-x: 50%;
-        
-    }h1{
-        background-color: #2B2C30;;
-        height: 50px;
-        width: 100%;
-        font-size: 150%;
-        color: white;
-        margin-top: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-    }#backColor{
-        background-color: $yellow;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }h3{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 100%;
-        width: 100%;
-        
-    }.iconComienzo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        color: white;       
-    }.movieWatch {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 100%;
-        color: white;
-    }.btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $text-btn;
-        width: 90%;
-        font-size: 90%;
-    }#center-items{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }.iconStar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 3%;
-        color: #c14748;
-    }.actor{
-        color: #c14748;
-        text-decoration: none;
-    }.actor a{
-        text-decoration: none;
-        color: #c14748;
-    }
+.sectionDetails {
+  background-color: white;
+
+  #borderdelete {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .detalles {
+    background-image: url(../img/kill.jpg);
+    width: 100%;
+    height: 452px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+  }
+
+  h1 {
+    background-color: #2b2c30;
+    height: 50px;
+    width: 100%;
+    font-size: 150%;
+    color: white;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  #backColor {
+    background-color: $yellow;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    width: 100%;
+  }
+
+  .iconComienzo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: $text-purple;
+  }
+
+  .movieWatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 100%;
+    color: $text-purple;
+  }
+
+  .btn {
+    background-color: #f5f5f5;
+    padding: 9px;
+    width: 90%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 19px;
+    color: #453F78;
+
+  }
+
+  #center-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iconStar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+    color: #c14748;
+  }
+
+  .actor {
+    color: #c14748;
+    text-decoration: none;
+  }
+
+  .actor a {
+    text-decoration: none;
+    color: #c14748;
+  }
 }
 /* END DETAILS*/
 
 /*INICIO PROFILE*/
-.profile{
-    .imagen-profile{
-        background-color: white;
-    }
-    .img-profile{
-        margin-top: 2rem;
-    }
-    .text-profile{
-        font-size: 15px;
-    }
-   
-    
-    
+.profile {
+  .imagen-profile {
+    background-color: white;
+  }
 
+  .img-profile {
+    margin-top: 1rem;
+  }
+
+  .text-profile {
+    font-size: 15px;
+  }
 }
- .linea-roja{
-        background-color: $yellow;
-        height: 8vh;
-        margin-top: 0;
-    }
-    .favorites{
-        color:white;
-    }
+
+.linea-roja {
+  background-color: $yellow;
+  height: 8vh;
+  margin-top: 0;
+}
+
+.favorites {
+  color: $text-purple;
+  font-family: Anton;
+}
 /*.container-data{
     margin-top: -32%;
     }*/
-.fa-star{
-        color:$text-btn;
-    }
+.fa-star {
+  color: $text-btn;
+}
 
+.purple {
+  background-color: $japanese-purple !important;
+}
+
+.purples {
+  width: 43px;
+  height: 43px;
+  background-color: $japanese-purple;
+}
 /* SECCION PELICULAS */
 
-.peliculas{
-    padding-top: 20px;
-	width:100%;
-    background-color:white;
-    .waves-effect{
-        right: 39px;
-        background-color: #F2F2F2;
-        
-    }
-    #filtrar {
-        background-color: whitesmoke;
-        color: $text-btn;
-    }
-    .fa-filter{
-        font-size: 30px;
-        background-color: white;
-    }
-    .fa-star{
-        color:$text-btn;
-    }
-    
-    
-    
-}
-    .search-button {
-    background-color:$text-btn !important;
-    width: 43px !important;
-    height: 43px !important;
-}
-    .btn-floating.btn-large i {
-    line-height: 49px;
+.peliculas {
+  padding-top: 20px;
+  width: 100%;
+  background-color: white;
+
+  .waves-effect {
+    right: 39px;
+    background-color: #f2f2f2;
+  }
+
+  #filtrar {
+    background-color: whitesmoke;
+    color: $text-purple;
+  }
+
+  .fa-filter {
+    font-size: 30px;
+    background-color: white;
+  }
+
+  .fa-star {
+    color: $text-btn;
+  }
 }
 
-.filtrar{
-    width: 100%;
-    height: 40px;
-    border: none;
-    margin-top: 1%;
-    background-color:$rojo;
-    color:white;
-}
-.titulos{
-	display: flex;
+.search-button {
+  background-color: $text-btn !important;
+  width: 43px !important;
+  height: 43px !important;
 }
 
-.movie-title{
-	font-weight: 900;
-	color:black;
-}
-.movie-year{
-	margin-left: 2%;
-    font-size: 10px;
-    margin-top: 5px;
-    color: gray;
-}
-.category{
-	margin-left: 2%;
-    font-size: 10px;
-    margin-top: 5px;
-    color: gray;
+.btn-floating.btn-large i {
+  line-height: 59px;
 }
 
-.lineavert{
-	background-color: gray;
-    width: 2px;
-    height: 14px;
-    margin-left: 1%;
-    margin-right: -1%;
-    margin-top: 1%;
-}
-.add-favorite{
-	background-color: $yellow;
-    border: none;
-    border-radius: 6px;
-	width: 82%;
-    color: white;
-    
+.filtrar {
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin-top: 1%;
+  //background-color: $rojo;
+  color: $text-purple;
 }
 
-.movie-details{
-	display: flex;
+.titulos {
+  display: flex;
 }
 
-.fa-clock-o{
-	color: $rojo;
-    font-size: 98%;
-    margin-right: 1%;
+.movie-title {
+  font-weight: 900;
+  color: $japanese-purple;
+  font-size: 11px;
 }
 
-.movie-minutes{
-	font-size: 12px;
-	color:$rojo;
-	margin-right: 2%;
+.movie-year {
+  margin-left: 2%;
+  font-size: 10px;
+  margin-top: 5px;
+  color: gray;
 }
 
-.movie-director{
-	color:$rojo;
-	margin-right: 2%;
+.category {
+  margin-left: 2%;
+  font-size: 10px;
+  margin-top: 5px;
+  color: gray;
 }
 
-.fa-film{
-	color: $rojo;
-    font-size: 98%;
-    margin-right: 1%;
+.lineavert {
+  background-color: gray;
+  width: 2px;
+  height: 14px;
+  margin-left: 1%;
+  margin-right: -1%;
+  margin-top: 1%;
 }
 
-.movie:hover{
-	background-color:$gris-claro;
+.add-favorite {
+  background-color: #f5f5f5;
+  padding: 9px;
+  width: 100%;
+  margin-top: 8px;
+  /* letter-spacing: 2px; */
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 11px;
+  color: $text-purple;
 }
-select{
-    width: 89%;
+
+.add-favorite:hover {
+  background-color: $yellow;
+}
+
+.movie-details {
+  display: flex;
+}
+
+.fa-clock-o {
+  color: $rojo;
+  font-size: 98%;
+  margin-right: 1%;
+}
+
+.movie-minutes {
+  font-size: 12px;
+  color: $rojo;
+  margin-right: 2%;
+}
+
+.movie-director {
+  color: $rojo;
+  margin-right: 2%;
+}
+
+.fa-film {
+  color: $rojo;
+  font-size: 98%;
+  margin-right: 1%;
+}
+
+.movie:hover {
+  background-color: $gris-claro;
+}
+
+select {
+  width: 89%;
+  color:$text-purple;
 }
 /*FIN SECCION PELICULAS*/
 
 /*Registro*/
 
 /*INICIO ACTOR*/
-.actor{
-    .name-actor{
+.actor {
+  .name-actor {
     background-color: $rojo;
-    height:50vh;
+    height: 50vh;
+  }
+
+  h2 {
+    color: white;
+    margin-top: 10rem;
+    text-align: center;
+  }
+
+  .movies-actors {
+    background-color: white;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+  }
+
+  p {
+    display: block;
+    padding-top: 20px;
+    margin-bottom: -4px;
+  }
 }
-h2{ 
-        color: white;
-        margin-top:10rem;
-        text-align:center;
-    }
-    .movies-actors{
-        background-color:white;
-        height:40vh;
-        position:absolute;
-        bottom:0;
-    }
-    p{
-        display:block;
-        padding-top: 20px;
-        margin-bottom: -4px;
-    }
-}
+
 #director {
-    width: 72%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid $yellow;
-    color: $text-btn;
-    font-size: 9px;
-    
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid $yellow;
+  color: $japanese-purple;
+  font-size: 12px;
+}
+.btn-large:hover, .btn:hover{
+    background-color: $yellow;
 }

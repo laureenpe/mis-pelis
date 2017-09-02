@@ -10004,36 +10004,62 @@ if (jQuery) {
   };
 })(jQuery);
 
+$(document).ready(function () {
+    loadDataMovies();
+    getFromLocalStorage(); //obtener local storage
+
+});
+
+function loadDataMovies() {
+	var req = new XMLHttpRequest();
+	var URL = "https://netflixroulette.net/api/api.php?";
+	var queryType = "director=";
+	req.open('GET', URL + queryType + director, true);
+	req.addEventListener("load", function () {
+		response = JSON.parse(req.responseText);
+		console.log(response);
+		response.forEach(function (ele) {
+		var titulo = ele.show_title;
+		var anio = ele.release_year;
+		var categoria = ele.category;
+        var duracion = ele.runtime;
+        var id = ele.id;
+		//var director = ele.director;
+		$(".favorites-show").append("<div id=#movie_"+id+  "class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
+
+	});
+	});
+	req.send(null);
+	
+}
 var response;//global variable
 var director;//global variable
 
 $(document).ready(function () {
 	$("#searchDirector").click(loadData);
-
+	getFromLocalStorage(); //obtener local storage
 });
 
 function loadData() {
 	var req = new XMLHttpRequest();
 	var URL = "https://netflixroulette.net/api/api.php?";
 	var queryType = "director=";
-	//var director = "Quentin%20Tarantino";
-	//var director = value;
 	req.open('GET', URL + queryType + director, true);
 	req.addEventListener("load", function () {
 		response = JSON.parse(req.responseText);
 		//console.log(response);
 		response.forEach(function (ele) {
-		var titulo = ele.show_title;
-		var anio = ele.release_year;
-		var categoria = ele.category;
-		var duracion = ele.runtime;
-		//var director = ele.director;
-		$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
+			var titulo = ele.show_title;
+			var anio = ele.release_year;
+			var categoria = ele.category;
+			var duracion = ele.runtime;
+			//var director = ele.director;
+			$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
 
-	});
+		});
 	});
 	req.send(null);
-	
+
 }
 //filtering	
 $("#filtrar").click(function () {
@@ -10048,9 +10074,35 @@ $("#filtrar").click(function () {
 		var duracion = ele.runtime;
 		var director = ele.director;
 		$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a  href='' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
+
 	});
 });
 
+//Capturing input
+$("#director").keyup(function () {
+	director = $(this).val();
+	//console.log(director);
+
+})
+	.keyup();
+
+function getFromLocalStorage() {
+	$('#filtrar').val(localStorage.getItem('filtrar'));
+	$('#director').val(localStorage.getItem('director'));
+
+
+}
+function saveToLocalStorage() {
+	if (typeof (Storage) !== "undefined") {//soporte del navegador
+		localStorage.setItem('filtrar', $('#filtrar').val());
+		localStorage.setItem('director', $('#director').val());
+
+
+	} else {
+		//No hay soporte de navegador
+		console.log('Sorry there is not support for local storage.')
+	}
+}
 
 //funcion para que se despliegue el menu lateral
 function openNav() {
@@ -10060,12 +10112,6 @@ function openNav() {
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 }
-//Capturing input
-$("#director").keyup(function () {
-	director = $(this).val();
-	console.log(director);
-})
-	.keyup();
 var photo_url = ''; //save pictures
 $(document).ready(function () {
     $("#btn-upload").click(handleFileSelect);//handleFileSelect, extract the files on input
@@ -10133,7 +10179,7 @@ function validateForm() {
 // If validations are true, then go to movies.html and save it into 
 function onLogin() {
     if (validateForm()) { //If validate form is True
-        $("#sign-session").attr("href", "movies.html");
+        $("#sign-session").attr("href", "profile.html");
         saveToLocalStorage(); //guarda a local storage
     }
 }
