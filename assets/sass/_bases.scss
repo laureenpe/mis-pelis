@@ -51,7 +51,6 @@ body {
     font-size: 80px;
     letter-spacing: 3px;
     padding-top: 15%;
-    padding-bottom: 10%;
   }
 
   #username label {
@@ -68,7 +67,14 @@ body {
     font-size: 13px;
   }
 }
-
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+input#email{
+  border-bottom: none !important;
+}
 #username,
 #firstname,
 #country {
