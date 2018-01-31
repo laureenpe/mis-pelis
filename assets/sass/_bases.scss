@@ -7,7 +7,9 @@
 body {
   background-color: $yellow;
 }
+
 /*Index*/
+
 #intro {
   background-color: $yellow;
   padding-bottom: 30%;
@@ -22,7 +24,6 @@ body {
     padding-top: 30%;
     padding-bottom: 10%;
   }
-
   button {
     background-color: $blanco;
     font-weight: bold;
@@ -35,46 +36,53 @@ body {
     margin-bottom: 10px;
     border-radius: 3px;
   }
-
   a {
     color: $weldon-blue;
   }
 }
+
 /*Login*/
+
 #login {
   background-color: $yellow;
-
+  display: flex;
   h5 {
-    font-family: Anton,sans-serif;
+    font-family: Anton, sans-serif;
     text-transform: uppercase;
     color: $text-purple;
     font-size: 80px;
     letter-spacing: 3px;
-    padding-top: 15%;
+    padding-top: 20px;
   }
-
   #username label {
     color: white;
   }
-
   input[type=text]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid white;
     box-shadow: none;
   }
-
   input[type=text]:not(.browser-default):focus:not([readonly])+label {
     color: white;
     font-size: 13px;
   }
+  form {
+    top: 20px;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
 }
- /* label underline focus color */
- .input-field input[type=text]:focus {
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
   border-bottom: none !important;
   box-shadow: none !important;
 }
-input#email{
+
+input#email {
   border-bottom: none !important;
 }
+
 #username,
 #firstname,
 #country {
@@ -96,22 +104,18 @@ input#email{
     letter-spacing: 2px;
     margin-bottom: 10px;
     border-radius: 3px;
-
     a {
       color: $weldon-blue;
     }
   }
-
   .float {
     float: right;
     width: 59px;
     border-radius: 50%;
   }
-
   .gray {
     background-color: white;
   }
-
   .btn-floating.btn-large i {
     line-height: 56px;
     color: $japanese-purple;
@@ -134,7 +138,6 @@ nav {
 
 #registro {
   background-color: white;
-
   .btn {
     background-color: $blanco;
     color: $weldon-blue;
@@ -142,11 +145,9 @@ nav {
     padding: 0 1rem;
     box-shadow: none;
   }
-
   #btn-save {
     margin-top: 20px;
   }
-
   #files {
     color: $japanese-purple;
     padding-top: 10px;
@@ -158,12 +159,9 @@ nav {
 }
 
 .input-field {
-  margin-top: 15%;
-
   span {
     color: $japanese-purple;
   }
-
   input {
     background-color: whitesmoke !important;
     border-radius: 3px !important;
@@ -178,7 +176,6 @@ nav {
     text-transform: capitalize;
     margin-bottom: 50px;
   }
-
   .create {
     background-color: $gris-oscuro;
     font-size: 16px;
@@ -187,23 +184,31 @@ nav {
   }
 }
 
-
-
 /* The side navigation menu */
+
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 4; /* Stay on top */
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 4;
+  /* Stay on top */
   top: 0;
   left: 0;
-  background-color: white; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: white;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
+
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -214,12 +219,14 @@ nav {
 }
 
 /* When you mouse over the navigation links, change their color */
+
 .sidenav a:hover,
 .offcanvas a:focus {
   color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -229,33 +236,31 @@ nav {
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
   }
-
   .sidenav a {
     font-size: 18px;
   }
 }
 
-
-
 /* DETAILS */
+
 .sectionDetails {
   background-color: white;
-
   #borderdelete {
     padding-left: 0;
     padding-right: 0;
   }
-
   .detalles {
     background-image: url(../img/kill.jpg);
     width: 100%;
@@ -264,7 +269,6 @@ nav {
     background-size: contain;
     background-position-x: 50%;
   }
-
   h1 {
     background-color: #2b2c30;
     height: 50px;
@@ -277,7 +281,6 @@ nav {
     justify-content: center;
     font-weight: 700;
   }
-
   #backColor {
     background-color: $yellow;
     width: 100%;
@@ -285,7 +288,6 @@ nav {
     align-items: center;
     justify-content: center;
   }
-
   h3 {
     display: flex;
     align-items: center;
@@ -293,7 +295,6 @@ nav {
     font-size: 100%;
     width: 100%;
   }
-
   .iconComienzo {
     display: flex;
     align-items: center;
@@ -301,7 +302,6 @@ nav {
     width: 100%;
     color: $text-purple;
   }
-
   .movieWatch {
     display: flex;
     align-items: center;
@@ -310,7 +310,6 @@ nav {
     font-size: 100%;
     color: $text-purple;
   }
-
   .btn {
     background-color: #f5f5f5;
     padding: 9px;
@@ -320,15 +319,12 @@ nav {
     font-weight: 700;
     font-size: 19px;
     color: #453F78;
-
   }
-
   #center-items {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .iconStar {
     display: flex;
     align-items: center;
@@ -336,29 +332,27 @@ nav {
     margin-left: 3%;
     color: #c14748;
   }
-
   .actor {
     color: #c14748;
     text-decoration: none;
   }
-
   .actor a {
     text-decoration: none;
     color: #c14748;
   }
 }
+
 /* END DETAILS*/
 
 /*INICIO PROFILE*/
+
 .profile {
   .imagen-profile {
     background-color: white;
   }
-
   .img-profile {
     margin-top: 1rem;
   }
-
   .text-profile {
     font-size: 15px;
   }
@@ -374,9 +368,11 @@ nav {
   color: $text-purple;
   font-family: Anton;
 }
+
 /*.container-data{
     margin-top: -32%;
     }*/
+
 .fa-star {
   color: $text-btn;
 }
@@ -390,28 +386,25 @@ nav {
   height: 43px;
   background-color: $japanese-purple;
 }
+
 /* SECCION PELICULAS */
 
 .peliculas {
   padding-top: 20px;
   width: 100%;
   background-color: white;
-
   .waves-effect {
     right: 39px;
     background-color: #f2f2f2;
   }
-
   #filtrar {
     background-color: whitesmoke;
     color: $text-purple;
   }
-
   .fa-filter {
     font-size: 30px;
     background-color: white;
   }
-
   .fa-star {
     color: $text-btn;
   }
@@ -431,8 +424,7 @@ nav {
   width: 100%;
   height: 40px;
   border: none;
-  margin-top: 1%;
-  //background-color: $rojo;
+  margin-top: 1%; //background-color: $rojo;
   color: $text-purple;
 }
 
@@ -518,32 +510,31 @@ nav {
 
 select {
   width: 89%;
-  color:$text-purple;
+  color: $text-purple;
 }
+
 /*FIN SECCION PELICULAS*/
 
 /*Registro*/
 
 /*INICIO ACTOR*/
+
 .actor {
   .name-actor {
     background-color: $rojo;
     height: 50vh;
   }
-
   h2 {
     color: white;
     margin-top: 10rem;
     text-align: center;
   }
-
   .movies-actors {
     background-color: white;
     height: 40vh;
     position: absolute;
     bottom: 0;
   }
-
   p {
     display: block;
     padding-top: 20px;
@@ -560,6 +551,8 @@ select {
   color: $japanese-purple;
   font-size: 12px;
 }
-.btn-large:hover, .btn:hover{
-    background-color: $yellow;
+
+.btn-large:hover,
+.btn:hover {
+  background-color: $yellow;
 }
