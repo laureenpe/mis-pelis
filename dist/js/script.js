@@ -10023,206 +10023,249 @@ if (Vel) {
   };
 })(jQuery);
 
-$(document).ready(function () {
-    loadDataMovies();
-    getFromLocalStorage(); //obtener local storage
+$(document).ready(function() {
+  loadDataMovies();
+  getFromLocalStorage(); //obtener local storage
+  $("select").material_select();
 
 });
 
 function loadDataMovies() {
-	var req = new XMLHttpRequest();
-	var URL = "https://netflixroulette.net/api/api.php?";
-	var queryType = "director=";
-	req.open('GET', URL + queryType + director, true);
-	req.addEventListener("load", function () {
-		response = JSON.parse(req.responseText);
-		console.log(response);
-		response.forEach(function (ele) {
-		var titulo = ele.show_title;
-		var anio = ele.release_year;
-		var categoria = ele.category;
-        var duracion = ele.runtime;
-        var id = ele.id;
-		//var director = ele.director;
-		$(".favorites-show").append("<div id=#movie_"+id+  "class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
-
-	});
-	});
-	req.send(null);
-	
+  var req = new XMLHttpRequest();
+  var URL = "https://netflixroulette.net/api/api.php?";
+  var queryType = "director=";
+  req.open("GET", URL + queryType + director, true);
+  req.addEventListener("load", function() {
+    response = JSON.parse(req.responseText);
+    console.log(response);
+    response.forEach(function(ele) {
+      var titulo = ele.show_title;
+      var anio = ele.release_year;
+      var categoria = ele.category;
+      var duracion = ele.runtime;
+      var id = ele.id;
+      //var director = ele.director;
+      $(".favorites-show").append(
+        "<div id=#movie_" +
+          id +
+          "class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" +
+          titulo +
+          "</a><p class='movie-year'>" +
+          anio +
+          "</p><div class='lineavert'></div><p class='category'>" +
+          categoria +
+          "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" +
+          duracion +
+          "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" +
+          director +
+          "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>"
+      );
+    });
+  });
+  req.send(null);
 }
-var response;//global variable
-var director;//global variable
 
-$(document).ready(function () {
-	$("#searchDirector").click(loadData);
-	getFromLocalStorage(); //obtener local storage
+var response; //global variable
+var director; //global variable
+
+$(document).ready(function() {
+  $("#searchDirector").click(loadData);
+  getFromLocalStorage(); //obtener local storage
 });
 
+$(document).ready(function() {
+  $("select").material_select();
+});
 function loadData() {
-	var req = new XMLHttpRequest();
-	var URL = "https://netflixroulette.net/api/api.php?";
-	var queryType = "director=";
-	req.open('GET', URL + queryType + director, true);
-	req.addEventListener("load", function () {
-		response = JSON.parse(req.responseText);
-		//console.log(response);
-		response.forEach(function (ele) {
-			var titulo = ele.show_title;
-			var anio = ele.release_year;
-			var categoria = ele.category;
-			var duracion = ele.runtime;
-			//var director = ele.director;
-			$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
-
-		});
-	});
-	req.send(null);
-
+  var req = new XMLHttpRequest();
+  var URL = "https://netflixroulette.net/api/api.php?";
+  var queryType = "director=";
+  req.open("GET", URL + queryType + director, true);
+  req.addEventListener("load", function() {
+    response = JSON.parse(req.responseText);
+    //console.log(response);
+    response.forEach(function(ele) {
+      var titulo = ele.show_title;
+      var anio = ele.release_year;
+      var categoria = ele.category;
+      var duracion = ele.runtime;
+      //var director = ele.director;
+      $(".mostrar-pelis").append(
+        "<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a href='details.html' class='movie-title'>" +
+          titulo +
+          "</a><p class='movie-year'>" +
+          anio +
+          "</p><div class='lineavert'></div><p class='category'>" +
+          categoria +
+          "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" +
+          duracion +
+          "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" +
+          director +
+          "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i><i class='fa fa-star' aria-hidden='true'></i></div></div></div>"
+      );
+    });
+  });
+  req.send(null);
 }
-//filtering	
-$("#filtrar").click(function () {
-	var select = $("#select-category").val();
-	$(".mostrar-pelis").html("");
-	var filtered = response.filter(object => object.category == select);
-	//console.log(filtered);
-	filtered.forEach(function (ele) {
-		var titulo = ele.show_title;
-		var anio = ele.release_year;
-		var categoria = ele.category;
-		var duracion = ele.runtime;
-		var director = ele.director;
-		$(".mostrar-pelis").append("<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a  href='' class='movie-title'>" + titulo + "</a><p class='movie-year'>" + anio + "</p><div class='lineavert'></div><p class='category'>" + categoria + "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" + duracion + "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" + director + "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i></div></div></div>");
-
-	});
+//filtering
+$("#filtrar").click(function() {
+  var select = $("#select-category").val();
+  $(".mostrar-pelis").html("");
+  var filtered = response.filter(object => object.category == select);
+  //console.log(filtered);
+  filtered.forEach(function(ele) {
+    var titulo = ele.show_title;
+    var anio = ele.release_year;
+    var categoria = ele.category;
+    var duracion = ele.runtime;
+    var director = ele.director;
+    $(".mostrar-pelis").append(
+      "<div class='movie'><div class='row'><div class='col m8 s8'><div class='titulos'><a  href='' class='movie-title'>" +
+        titulo +
+        "</a><p class='movie-year'>" +
+        anio +
+        "</p><div class='lineavert'></div><p class='category'>" +
+        categoria +
+        "</p></div></div><div class='col m4 s4'><button class='add-favorite'>Add favorites</button></div></div><div class='row'><div class='col m8 s8'><div class='movie-details'><i class='fa fa-clock-o' aria-hidden='true'></i><p class='movie-minutes'>" +
+        duracion +
+        "</p><i class='fa fa-film' aria-hidden='true'></i><p class='movie-director'>" +
+        director +
+        "</p></div></div><div class='col m4 s4'><i class='fa fa-star' aria-hidden='true'></i></div></div></div>"
+    );
+  });
 });
 
 //Capturing input
-$("#director").keyup(function () {
-	director = $(this).val();
-	//console.log(director);
-
-})
-	.keyup();
+$("#director")
+  .keyup(function() {
+    director = $(this).val();
+    //console.log(director);
+  })
+  .keyup();
 
 function getFromLocalStorage() {
-	$('#filtrar').val(localStorage.getItem('filtrar'));
-	$('#director').val(localStorage.getItem('director'));
-
-
+  $("#filtrar").val(localStorage.getItem("filtrar"));
+  $("#director").val(localStorage.getItem("director"));
 }
 function saveToLocalStorage() {
-	if (typeof (Storage) !== "undefined") {//soporte del navegador
-		localStorage.setItem('filtrar', $('#filtrar').val());
-		localStorage.setItem('director', $('#director').val());
-
-
-	} else {
-		//No hay soporte de navegador
-		console.log('Sorry there is not support for local storage.')
-	}
+  if (typeof Storage !== "undefined") {
+    //soporte del navegador
+    localStorage.setItem("filtrar", $("#filtrar").val());
+    localStorage.setItem("director", $("#director").val());
+  } else {
+    //No hay soporte de navegador
+    console.log("Sorry there is not support for local storage.");
+  }
 }
 
 //funcion para que se despliegue el menu lateral
 function openNav() {
-	document.getElementById("mySidenav").style.width = "50%";
+  document.getElementById("mySidenav").style.width = "50%";
 }
 //funcion para cerrar el menu lateral
 function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0";
 }
-var photo_url = ''; //save pictures
-$(document).ready(function () {
-    $("#btn-upload").click(handleFileSelect);//handleFileSelect, extract the files on input
-    $('#sign-session').click(onLogin);//listener to button click
-    $("#sign-session").click(saveToLocalStorage); //guarda a local storage
-    getFromLocalStorage(); //obtener local storage
+
+var photo_url = ""; //save pictures
+$(document).ready(function() {
+  $("#btn-upload").click(handleFileSelect); //handleFileSelect, extract the files on input
+  $("#sign-session").click(onLogin); //listener to button click
+  $("#sign-session").click(saveToLocalStorage); //guarda a local storage
+  getFromLocalStorage(); //obtener local storage
 });
 
 //This function save to local storage
 function saveToLocalStorage() {
-    if (typeof (Storage) !== "undefined") {//soporte del navegador
-        if (photo_url != '') {//si la foto es diferente de vacìo
-            localStorage.setItem('photo', photo_url);
-        }
-        if ($('#firstname').val() != '') {//si el nombre es diferente de vacío
-            localStorage.setItem('firstname', $('#firstname').val());
-        }
-        if ($('#username').val() != '') {//si el valor es diferente de vacìo
-            localStorage.setItem('username', $('#username').val());
-        }
-        if ($('#email').val() != '') {//si el valor es diferente de vacìo
-            localStorage.setItem('email', $('#email').val());
-        }
-        if ($('#country').val() != '') {//si el valor es diferente de vacìo
-            localStorage.setItem('country', $('#country').val());
-        }
-        
-
-    } else {
-        //No hay soporte de navegador
-        console.log('Sorry there is not support for local storage.')
+  if (typeof Storage !== "undefined") {
+    //soporte del navegador
+    if (photo_url != "") {
+      //si la foto es diferente de vacìo
+      localStorage.setItem("photo", photo_url);
     }
+    if ($("#firstname").val() != "") {
+      //si el nombre es diferente de vacío
+      localStorage.setItem("firstname", $("#firstname").val());
+    }
+    if ($("#username").val() != "") {
+      //si el valor es diferente de vacìo
+      localStorage.setItem("username", $("#username").val());
+    }
+    if ($("#email").val() != "") {
+      //si el valor es diferente de vacìo
+      localStorage.setItem("email", $("#email").val());
+    }
+    if ($("#country").val() != "") {
+      //si el valor es diferente de vacìo
+      localStorage.setItem("country", $("#country").val());
+    }
+  } else {
+    //No hay soporte de navegador
+    console.log("Sorry there is not support for local storage.");
+  }
 }
 
 function getFromLocalStorage() {
-    $('#photo').attr('src', localStorage.getItem('photo'));
-    $('#firstname').val(localStorage.getItem('firstname'));
-    $('#username').val(localStorage.getItem('username'));
-    $('#email').val(localStorage.getItem('email'));
-    $('#country').val(localStorage.getItem('country'));
+  $("#photo").attr("src", localStorage.getItem("photo"));
+  $("#firstname").val(localStorage.getItem("firstname"));
+  $("#username").val(localStorage.getItem("username"));
+  $("#email").val(localStorage.getItem("email"));
+  $("#country").val(localStorage.getItem("country"));
 }
 
 //This function validate the name and email and put a red border in case of error
 function validateForm() {
-    var valid = true;
-    if (!(/^([a-zñáéíóú]{2,13})+$/.test($("#firstname").val()))) {
-        $("#firstname").css("border", "1px solid red");
-        alert('El nombre debe ser válido');
-        valid = false;
-    }
-    
+  var valid = true;
+  if (!/^([a-zñáéíóú]{2,13})+$/.test($("#username").val())) {
+    $("#username").css("border", "1px solid red");
+    alert("El nombre debe ser válido");
+    valid = false;
+  }
 
-    if (!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test($('#email').val()))) {
-        $("#email").css("border", "1px solid red");
-        alert('Error en el email');
-        valid = false;
-    }
-    if ($('#password').val() == '') {
-        $("#password").css("border", "1px solid red");
-        alert('Country no debe estar vacío');
-        valid = false;
-    }
-    return valid;
+  if (
+    !/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/.test(
+      $("#email").val()
+    )
+  ) {
+    $("#email").css("border", "1px solid red");
+    alert("Error en el email");
+    valid = false;
+  }
+  if ($("#password").val() == "") {
+    $("#password").css("border", "1px solid red");
+    alert("Country no debe estar vacío");
+    valid = false;
+  }
+  return valid;
 }
-// If validations are true, then go to movies.html and save it into 
+// If validations are true, then go to movies.html and save it into
 function onLogin() {
-    if (validateForm()) { //If validate form is True
-        $("#sign-session").attr("href", "profile.html");
-        saveToLocalStorage(); //guarda a local storage
-    }
+  if (validateForm()) {
+    //If validate form is True
+    $("#sign-session").attr("href", "profile.html");
+    saveToLocalStorage(); //guarda a local storage
+  }
 }
 //Function to save images in local storage
 function handleFileSelect() {
-    var files = $('#files')[0].files;
-    // Gets the image selected on input and assign them to image. Get from https://www.html5rocks.com/en/tutorials/file/dndfiles/
-    for (var i = 0, file; file = files[i]; i++) {
-        // Si la imagen coincide, proseguir
-        if (!file.type.match('image.*')) {
-            continue;
-        }
-        var reader = new FileReader(); //object js to process the image
-        // when load image
-        reader.onload = (function (theFile) {
-            return function (e) {
-                // Render thumbnail.
-                $('#photo').attr('src', e.target.result);//assign the image to the function
-                photo_url = e.target.result;
-            };
-        })(file);
-        // lee la imagen como una URL
-        reader.readAsDataURL(file);
+  var files = $("#files")[0].files;
+  // Gets the image selected on input and assign them to image. Get from https://www.html5rocks.com/en/tutorials/file/dndfiles/
+  for (var i = 0, file; (file = files[i]); i++) {
+    // Si la imagen coincide, proseguir
+    if (!file.type.match("image.*")) {
+      continue;
     }
+    var reader = new FileReader(); //object js to process the image
+    // when load image
+    reader.onload = (function(theFile) {
+      return function(e) {
+        // Render thumbnail.
+        $("#photo").attr("src", e.target.result); //assign the image to the function
+        photo_url = e.target.result;
+      };
+    })(file);
+    // lee la imagen como una URL
+    reader.readAsDataURL(file);
+  }
 }
 //This function validate the create user
-

@@ -20,7 +20,9 @@
 		<div class="container">
 			<div class="row navbar">
 				<div class="col m3 s3 center-align">
-					<span onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+					<span onclick="openNav()">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</span>
 				</div>
 				<div class="col m6 s6 center-align">
 					<p class="titulo-seccion">CREATE ACCOUNT</p>
@@ -42,26 +44,32 @@
 						<input id="username" type="text" class="registro-username">
 						<span>E-mail :</span>
 						<input id="email" type="text" class="registro-email">
-						<span>Country :</span>
-						<input id="country" type="text" class="registro-country">
+					</div>
+					<div class="input-field">
+						<select>
+							<option value="" disabled selected>Country</option>
+							<option value="1">Colombia</option>
+							<option value="2">Chile</option>
+							<option value="3">Otro</option>
+						</select>
+						<label>Country</label>
 					</div>
 				</div>
-				<div class=" col s2 offset-s2 col m8 s8 center-align botones">
+				<div class=" col s12 m12 l12 botones">
 					<form action="#">
-						<div class="btn  file">
+						<div class="btn">
 							<span id="btn-upload" class="waves-effect waves-light btn upload">Upload Photo</span>
 						</div>
 						<input type="file" id="files" name="files[]" multiple />
+					</form>
 				</div>
-				</form>
 			</div>
-			<div class=" col s2 offset-s2 col m8 s8 center-align botones">
-				<a id="sign-session" class="waves-effect waves-light btn create">Create</a>
+			<div class=" col s12 m12 l12 botones">
+				<a id="sign-session" class="waves-effect waves-light btn btn-large ">Create</a>
 			</div>
 		</div>
 		</div>
 	</section>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	<script src="dist/js/script-min.js"></script>
 </body>
 

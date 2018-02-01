@@ -57,11 +57,11 @@ body {
   #username label {
     color: white;
   }
-  input[type=text]:not(.browser-default):focus:not([readonly]) {
+  input[type="text"]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid white;
     box-shadow: none;
   }
-  input[type=text]:not(.browser-default):focus:not([readonly])+label {
+  input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     color: white;
     font-size: 13px;
   }
@@ -74,7 +74,7 @@ body {
 
 /* label underline focus color */
 
-.input-field input[type=text]:focus {
+.input-field input[type="text"]:focus {
   border-bottom: none !important;
   box-shadow: none !important;
 }
@@ -105,7 +105,7 @@ input#email {
     margin-bottom: 10px;
     border-radius: 3px;
     a {
-      color: $weldon-blue;
+      color: $text-purple;
     }
   }
   .float {
@@ -143,7 +143,6 @@ nav {
     background-color: $blanco;
     color: $weldon-blue;
     font-family: Open Sans;
-    padding: 0 1rem;
     box-shadow: none;
   }
   #btn-save {
@@ -175,12 +174,10 @@ nav {
     background-color: $gris-oscuro;
     font-size: 12px;
     text-transform: capitalize;
-    margin-bottom: 50px;
   }
-  .create {
+  a {
     background-color: $gris-oscuro;
     font-size: 16px;
-    width: 70%;
     text-transform: capitalize;
   }
 }
@@ -239,7 +236,7 @@ nav {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
   padding: 20px;
 }
 
@@ -319,7 +316,7 @@ nav {
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 19px;
-    color: #453F78;
+    color: #453f78;
   }
   #center-items {
     display: flex;
