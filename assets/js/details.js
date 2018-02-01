@@ -1,8 +1,6 @@
 $(document).ready(function() {
   loadDataMovies();
   getFromLocalStorage(); //obtener local storage
-  $("select").material_select();
-
 });
 
 function loadDataMovies() {

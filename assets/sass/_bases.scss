@@ -5,21 +5,16 @@
 }
 
 body {
-  background-color: $yellow;
+  background-color: $blue;
 }
 
 /*Index*/
 
-#intro {
-  background-color: $yellow;
-  padding-bottom: 30%;
-}
-
 .intro-pelis {
-  p {
+  h1 {
     font-family: $font-familyAnton;
     font-size: 80px;
-    color: $text-purple;
+    color: $blanco;
     letter-spacing: 3px;
     padding-top: 30%;
     padding-bottom: 10%;
@@ -37,38 +32,7 @@ body {
     border-radius: 3px;
   }
   a {
-    color: $weldon-blue;
-  }
-}
-
-/*Login*/
-
-#login {
-  background-color: $yellow;
-  display: flex;
-  h5 {
-    font-family: Anton, sans-serif;
-    text-transform: uppercase;
-    color: $text-purple;
-    font-size: 80px;
-    letter-spacing: 3px;
-    padding-top: 20px;
-  }
-  #username label {
-    color: white;
-  }
-  input[type="text"]:not(.browser-default):focus:not([readonly]) {
-    border-bottom: 1px solid white;
-    box-shadow: none;
-  }
-  input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
-    color: white;
-    font-size: 13px;
-  }
-  form {
-    top: 20px;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    color: $green-light;
   }
 }
 
@@ -79,96 +43,19 @@ body {
   box-shadow: none !important;
 }
 
-input#email {
-  border-bottom: none !important;
-}
-
-#username,
-#firstname,
-#country {
-  //text-align:center;
-  border: none;
-  margin-top: 1px;
-  color: $text-purple;
-}
-
-#button-login {
-  button {
-    background-color: #f5f5f5;
-    font-weight: 700;
-    padding: 10px;
-    width: 100%;
-    border-style: none;
-    margin-top: 8px;
-    font-size: 17px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    a {
-      color: $text-purple;
-    }
-  }
-  .float {
-    float: right;
-    width: 59px;
-    border-radius: 50%;
-  }
-  .gray {
-    background-color: white;
-  }
-  .btn-floating.btn-large i {
-    line-height: 56px;
-    color: $japanese-purple;
-  }
-}
-
 nav {
-  background-color: $yellow;
+  background-color: $blue;
   width: 100%;
 }
 
 .titulo-seccion {
-  color: $text-purple;
+  color: $blanco;
   font-size: 16px;
 }
 
 .navbar {
   display: flex;
 }
-
-#registro {
-  padding-top: 30px;
-  background-color: white;
-  .btn {
-    background-color: $blanco;
-    color: $weldon-blue;
-    font-family: Open Sans;
-    box-shadow: none;
-  }
-  #btn-save {
-    margin-top: 20px;
-  }
-  #files {
-    color: $japanese-purple;
-    padding-top: 10px;
-  }
-}
-
-.gris {
-  background-color: white;
-}
-
-.input-field {
-  span {
-    color: $japanese-purple;
-  }
-  input {
-    background-color: whitesmoke !important;
-    border-radius: 3px !important;
-    height: 30px !important;
-  }
-}
-
 .botones {
   .upload {
     background-color: $gris-oscuro;
@@ -183,7 +70,6 @@ nav {
 }
 
 /* The side navigation menu */
-
 .sidenav {
   height: 100%;
   /* 100% Full-height */
@@ -206,7 +92,6 @@ nav {
 }
 
 /* The navigation menu links */
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -545,7 +430,6 @@ select {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 1px solid $yellow;
   color: $japanese-purple;
   font-size: 12px;
 }
@@ -553,4 +437,26 @@ select {
 .btn-large:hover,
 .btn:hover {
   background-color: $yellow;
+}
+
+/*Spin*/
+.spin {
+  h1,
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    
+    span {
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+  }
 }

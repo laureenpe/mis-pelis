@@ -16,13 +16,16 @@
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="index.html">Home</a>
 		<a href="movies.html">Movies</a>
-		<a href="profile.html">Profile</a>
+		<a href="spin.html">Spin</a>
+
 	</div>
 	<nav>
 		<div class="container">
 			<div class="row navbar">
 				<div class="col m4 s4 center-align">
-					<span onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+					<span onclick="openNav()">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</span>
 				</div>
 				<div class="col m4 s4 center-align">
 					<p class="titulo-seccion">MOVIES</p>
@@ -37,13 +40,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s6 m6 l6">
-					
 					<input id="director" placeholder="Director" type="" name="" value="">
-					
 				</div>
-				<div class="col s6 m6 l6">	
-					  <a  id="searchDirector" class=" purples btn-floating btn-large  "><i class="material-icons">search</i></a>
-
+				<div class="col s6 m6 l6">
+					<a id="searchDirector" class=" purples btn-floating btn-large  ">
+						<i class="material-icons">search</i>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -51,25 +53,26 @@
 			<div class="row">
 				<div class="col m9 s9 l9">
 					<select class="browser-default" id="select-category">
-					    <option  value="Comedies">Comedies</option>
-					    <option  value="Dramas">Dramas</option>
-					    <option  value="Action & Adventure">Action & Adventure</option>
-					    <option  value="Oscar-winning Movies">Oscar-winning Movies</option>
-						<option  value="Independent Movies">Independent Movies</option>
+						<option value="Comedies">Comedies</option>
+						<option value="Dramas">Dramas</option>
+						<option value="Action & Adventure">Action & Adventure</option>
+						<option value="Oscar-winning Movies">Oscar-winning Movies</option>
+						<option value="Independent Movies">Independent Movies</option>
 						<option value="Children & Family Movies">Children & Family Movies</option>
 						<option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
 						<option value="Classic Movies">Classic Movies</option>
 						<option value="Thrillers">Thrillers</option>
-					  </select>
+					</select>
 				</div>
 				<div class="col m1 s1 l1">
-					<a id="filtrar" href="#" class=""><i class="fa fa-filter" aria-hidden="true"></i></a>
+					<a id="filtrar" href="#" class="">
+						<i class="fa fa-filter" aria-hidden="true"></i>
+					</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col m12 s12">
 					<div id="movies" class="mostrar-pelis">
-
 					</div>
 				</div>
 			</div>

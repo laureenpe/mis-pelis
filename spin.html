@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--material icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8128449ca8.js"></script>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body class="white">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="row navbar">
+                <div class="col m4 s4 center-align">
+                    <span onclick="openNav()">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col m4 s4 center-align">
+                    <p class="titulo-seccion">MOVIES</p>
+                </div>
+                <div class="col m4 s4 center-align">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="spin">
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m6 l6">
+                    <h1>Find Something to watch:</h1>
+                    <hr>
+                    <div class="input-field col s12 content">
+                        <span>Genre</span>
+                        <select>
+                            <option value="" disabled selected>All Genre</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col s12 m12 l12 content">
+                        <span>Type</span>
+                        <form class="flex" action="#">
+                            <p>
+                                <input type="checkbox" id="movies" />
+                                <label for="movies">Movies</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="tvShow" />
+                                <label for="tvShow">Tv Shows</label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="input-field col s12 content">
+                        <span>Imdb rating</span>
+                        <select>
+                            <option value="1">>5</option>
+                            <option value="2">>6</option>
+                            <option value="3">>7</option>
+                            <option value="3">>8</option>
+                            <option value="3">>9</option>
+                        </select>
+                    </div>
+                </div>
+                <!--end first col 6-->
+
+                <div class="col s6 m6 l6">
+                    <div class="content">
+                        <div class="hw">
+                            <div class="hA">
+                                <h2>Marvel's Agents of S.H.I.E.L.D. (2013)</h2>
+                                <div class="">
+                                    <small>IMDB: 7.5/10</small>
+                                    <small>Drama, Action &amp; Adventure</small>
+                                    <small>5 Seasons</small>
+                                </div>
+                                <p class="">Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics
+                                    Division) puts together a team of agents to investigate the new, the strange and the
+                                    unknown around the globe, protecting the ordinary from the extraordinary.$</p>
+                                <div class="">
+                                    <button data-type="show" data-id="">Watch</button>
+                                    <a data-type="show" data-id="marvels-agents-of-shield-2013" href="/show/marvels-agents-of-shield-2013">
+                                        <button>More Info</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="e2">
+                                <picture class="img-responsive">
+                                    <img src="https://img.reelgood.com/content/show/f80137f9-fe91-4aa5-b6a2-c0ad791c7e34/poster-92.jpg" alt="" class="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="dist/js/script-min.js"></script>
+</body>
+
+</html>
