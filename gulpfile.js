@@ -3,11 +3,13 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
+var minify = require('gulp-minify');
 var webserver = require('gulp-webserver');
 
 gulp.task('script', function(){
 	gulp.src(['node_modules/jquery/dist/jquery.min.js','node_modules/materialize-css/dist/js/materialize.js','assets/js/*.js'])
 	.pipe(concat('script.js'))
+	.pipe(minify())
 	.pipe(gulp.dest('dist/js/'));
 });
 
