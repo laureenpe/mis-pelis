@@ -448,8 +448,7 @@ select {
   }
   .content {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
     span {
       height: 3rem;
       line-height: 3rem;
@@ -458,5 +457,9 @@ select {
   .flex{
     display: flex;
     justify-content: center;
+  }
+  hr{
+    margin-top: 25px;
+    margin-bottom: 20px;
   }
 }
